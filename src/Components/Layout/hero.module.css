@@ -1,0 +1,178 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 40px;
+  padding-top: 220px;
+}
+
+.left {
+  flex: 1;
+  color: #374151;
+  background: url('/bg-left.jpg') no-repeat center center/cover;
+}
+
+.left h3 {
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.orangeH3 {
+  color: #ea580c; 
+  background-color: #fff7ed; 
+  display: inline-block; 
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+.blueH3 {
+  color: #2563eb; 
+  background-color: #eff6ff; 
+  display: inline-block; 
+  padding: 6px 16px;
+  border-radius: 6px;
+ 
+}
+
+.left h1 {
+  font-size: 3.9em;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: #ea580c;
+  border-bottom: 3px solid #ffedd5;
+}
+
+.left p {
+  font-size: 1.18em;
+  margin-bottom: 20px;
+}
+
+.left button {
+  background: #2563eb;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.right {
+  flex: 1;
+  position: relative;
+  background: url('/bg-right.jpg') ;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.images img {
+  width: 240px;   
+  height: 350px;   
+  object-fit: cover; 
+}
+
+.lower {
+  margin-top: 40px;
+  border-radius: 30px;
+
+}
+
+.higher {
+  margin-top: 0;
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 40px 20px;
+    padding-top: 150px;  
+  }
+
+  .left h1 {
+    font-size: 2.8em;     
+  }
+
+  .left p {
+    font-size: 1em;       
+  }
+
+  .images img {
+    width: 180px;
+    height: 260px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;  
+    padding: 30px 20px;
+    padding-top: 120px;
+    text-align: center;       
+  }
+
+  .left {
+    background: none;         
+    margin-bottom: 30px;
+  }
+
+  .left h1 {
+    font-size: 2.2em;
+  }
+
+  .left p {
+    font-size: 0.95em;
+  }
+
+  .left button {
+    font-size: 1em;
+    padding: 12px 20px;
+  }
+
+  .right {
+    background: none;         
+  }
+
+  .images {
+    flex-direction: column;  
+    gap: 20px;
+  }
+
+  .images img {
+    width: 80%;               
+    height: auto;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .hero {
+    padding: 20px 15px;
+    padding-top: 100px;
+  }
+
+  .left h1 {
+    font-size: 1.8em;
+  }
+
+  .left p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .images img {
+    width: 100%;
+    height: auto;
+  }
+}

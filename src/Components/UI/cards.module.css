@@ -1,0 +1,312 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card {
+  background: #f9fafb;
+  border-radius: 6px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  height: 50px;
+}
+
+.header img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.card h2 {
+  font-size: 1.3em;
+  margin: 0;
+  color: #111827;
+}
+
+.card p {
+  font-size: 1em;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  color: #1f2937;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.button {
+  background: none;
+  border: none;
+  color: #1e3a8a;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+/* Media Queries for services */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.2em;
+  }
+
+  .card p {
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .card {
+    text-align: center; 
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .card h2 {
+    font-size: 1.1em;
+  }
+
+  .card p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .button {
+    font-size: 0.85em;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .cards {
+    padding: 0 10px; 
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 1em;
+  }
+
+  .card p {
+    font-size: 0.85em;
+  }
+}
+
+
+
+/* FeedbackCard styles */
+.card {
+  border-radius: 25px;
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.blue {
+  background: #2563eb;
+  color: #fff;
+}
+
+.blue p {
+  color: #ffffff; 
+}
+
+.blue .client {
+  font-size: 1em; 
+  color: #ffffff;
+}
+
+/* white cards */
+.white {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.white p {
+  color: #1f2937; 
+}
+
+.white .client {
+  font-size: 1.1em; 
+  color: #1f2937;
+}
+
+.stars {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.blue .stars {
+  color: #ffffff;
+}
+
+.white .stars {
+  color: #374151;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer h4 {
+  margin-bottom: 0;
+  font-size: 1.1em;
+}
+
+.footer p {
+  margin: 0; 
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.blue .circle {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+
+
+.white .circle {
+  background: #d1d5db;
+  color: #ffffff;
+}
+
+/* Media Queries for feedback cards */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .stars {
+    font-size: 1.1em;
+  }
+
+  .footer h4 {
+    font-size: 1em;
+  }
+
+  .footer p {
+    font-size: 0.85em;
+  }
+
+  .circle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 20px;
+  }
+
+  .card {
+    text-align: center;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .stars {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .footer {
+    flex-direction: column; /* stack name + circle */
+    gap: 10px;
+  }
+
+  .footer h4 {
+    font-size: 0.95em;
+  }
+
+  .footer p {
+    font-size: 0.8em;
+  }
+
+  .circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.85em;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .card {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .stars {
+    font-size: 0.9em;
+  }
+
+  .footer h4 {
+    font-size: 0.9em;
+  }
+
+  .footer p {
+    font-size: 0.75em;
+  }
+
+  .circle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.8em;
+  }
+}
+
+

@@ -1,0 +1,239 @@
+.blog {
+  padding: 60px 40px;
+  background-color: #f9fafb; 
+  text-align: center;
+}
+
+.tag {
+  background: #ffedd5; 
+  color: #ea580c; 
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+.blog h2 {
+  font-size: 2.1em;
+  margin-bottom: 20px;
+  color: #111827;
+  font-weight: 800;
+}
+
+.orange {
+  color: #ea580c;
+}
+
+.desc {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  color: #4b5563;
+}
+
+/* Cards layout */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Card styling */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image {
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  transition: transform 0.4s ease;
+  position: relative;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); 
+  z-index: 0;
+}
+
+.card:hover .image {
+  transform: scale(1.05); 
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.update {
+  background: #1e3a8a; 
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.overlay h3 {
+  font-size: 1.4em;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.overlay p {
+  font-size: 1em;
+  line-height: 1.4;
+  margin-bottom: 20px; 
+  text-align: left;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer h5 {
+  margin: 0;
+  font-size: 0.85em;
+  color: #ffffff;
+}
+
+/* Media Queries */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .blog {
+    padding: 40px 20px;
+  }
+
+  .blog h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .desc {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 25px;
+  }
+
+  .image {
+    height: 350px; 
+  }
+
+  .overlay h3 {
+    font-size: 1.2em;
+  }
+
+  .overlay p {
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .blog {
+    padding: 30px 15px;
+  }
+
+  .blog h2 {
+    font-size: 1.5em;
+  }
+
+  .desc {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .image {
+    height: 300px;
+  }
+
+   .image::before {
+    background: rgba(0, 0, 0, 0.65); /* darker overlay for mobile */
+  }
+
+  .overlay {
+    padding: 15px;
+    align-items: center; 
+    text-align: center;
+
+  }
+
+  .overlay h3 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+  }
+
+  .overlay p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  .footer {
+    flex-direction: column; 
+    gap: 8px;
+  }
+
+  .footer h5 {
+    font-size: 0.8em;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .blog {
+    padding: 20px 10px;
+  }
+
+  .blog h2 {
+    font-size: 1.3em;
+  }
+
+  .desc {
+    font-size: 0.9em;
+  }
+
+  .image {
+    height: 300px;
+  }
+
+  .overlay h3 {
+    font-size: 1em;
+  }
+
+  .overlay p {
+    font-size: 0.85em;
+  }
+
+  .footer h5 {
+    font-size: 0.75em;
+  }
+}

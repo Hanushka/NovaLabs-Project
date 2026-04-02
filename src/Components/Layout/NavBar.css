@@ -1,0 +1,219 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #111827;
+  color: #fff;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Side menu */
+.sideMenu {
+  position: fixed;
+  top: 0;
+  left: -100%; 
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: left 0.3s ease;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.sideMenu.active {
+  left: 0; 
+}
+
+/* Close icon */
+.sideMenu .close {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+/* Links inside side menu */
+.sideMenu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sideMenu li {
+  margin: 15px 0;
+}
+
+.sideMenu a {
+  text-decoration: none;
+  color: #111827;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* Contact Us button */
+.contactBtn {
+  display: inline-block;
+  background: #2563eb;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-top: 20px;
+  transition: background 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #1e40af;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: #111827;
+  position: absolute;   
+  right: 20px;          
+  top: 20px;            
+  z-index: 1100;        
+}
+
+/* Links inside side menu */
+.sideMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sideMenu li {
+  margin: 15px 0;
+}
+
+.sideMenu a {
+  display: block;              
+  text-decoration: none;
+  color: #111827;
+  font-size: 1.2em;
+  font-weight: 600;
+  padding: 10px 0;             
+}
+
+.sideMenu a:hover {
+  color: #2563eb;              
+}
+
+
+.sideMenu a.active {
+  color: #2563eb;
+}
+
+.contactBtn {
+  display: block;
+  background: #2563eb;
+  color: #fff !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: background 0.3s ease;
+}
+
+.contactBtn:hover {
+  background: #1e40af;
+}
+
+/* dropdowns */
+
+/* Dropdown button inside hamburger */
+.dropdownBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 0;
+  color: #111827;
+  font-weight: 600;
+  text-align: left;
+}
+
+.dropdownBtn:hover {
+  color: #2563eb;
+}
+
+/* Dropdown content inside hamburger */
+.dropdownContent {
+  background: #f9fafb;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Dropdown items */
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #e5e7eb;
+}
+
+.dropdownItem span {
+  font-size: 0.95em;
+  color: #374151;
+}
+
+
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .hamburger {
+    display: block; 
+  }
+
+  
+  .nav {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 35px;
+  }
+
+
+
+  @media (max-width: 480px) {
+  .hamburger {
+    font-size: 1.6em;
+  }
+}
+}

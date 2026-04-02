@@ -1,0 +1,189 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: none;
+  box-shadow: none;
+  border: none;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1em;
+}
+
+.nav a:hover {
+  color: #1d4ed8;
+}
+
+
+.activeLink {
+  color: #1d4ed8;
+  font-weight: bold;
+}
+
+.inactiveLink {
+  color: #374151;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.dropdownBtn:hover {
+  color: #1d4ed8;
+}
+
+.dropdownContent {
+  position: absolute;
+  top: 40px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.dropdownTop {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdownBottom {
+  padding-top: 10px;
+}
+
+.dropdownItem {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+.dropdownItem:hover {
+  background: #f3f4f6;
+}
+.dropdownItem h4 {
+  margin: 0;
+  font-size: 14px;
+  color: #383b3f;
+}
+
+.dropdownItem p {
+  margin: 0;
+  font-size: 12px;
+  color: gray;
+  margin-top: 4px;
+}
+
+
+.contact a {
+  background: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-right: 80px;
+  text-decoration: none; 
+  display: inline-block; 
+}
+
+.contact a:hover {
+  background: #1e40af;
+}
+
+/* media queries */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .nav {
+    gap: 20px;
+  }
+
+  .contact a {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin-right: 40px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* hide nav links */
+  }
+
+  .contact {
+    display: none; /* hide Contact Us button */
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+   .hamburger {
+    display: none; 
+  }
+}
+
+
