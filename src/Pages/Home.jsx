@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../Components/Layout/hero";
+import Hero from "../Components/Layout/Hero";
 import Counter from "../Components/UI/Counter";
 import WhoWeAre from "../Components/Layout/WhoWeAre";
 import Brands from "../Components/Layout/Brands";
